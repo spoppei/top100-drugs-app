@@ -1,0 +1,32 @@
+body {
+  font-family: Arial;
+  text-align: center;
+  padding: 20px;
+}
+
+#card {
+  width: 350px;
+  margin: 30px auto;
+  padding: 20px;
+  border: 2px solid black;
+  border-radius: 12px;
+  min-height: 140px;
+}
+
+#back {
+  display: none;
+  margin-top: 15px;
+  color: #444;
+  font-size: 18px;
+}
+
+#front {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+button {
+  margin: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+}
