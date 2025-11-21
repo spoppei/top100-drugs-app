@@ -1,32 +1,144 @@
 body {
-  font-family: Arial;
+  font-family: Arial, sans-serif;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
   text-align: center;
-  padding: 20px;
+  background: #fff5fb;
 }
 
-#card {
-  width: 350px;
-  margin: 30px auto;
-  padding: 20px;
-  border: 2px solid black;
-  border-radius: 12px;
-  min-height: 140px;
+h1 {
+  margin-bottom: 0;
 }
 
-#back {
-  display: none;
-  margin-top: 15px;
-  color: #444;
-  font-size: 18px;
+.subtitle {
+  margin-top: 4px;
+  margin-bottom: 20px;
+  color: #ff66a3;
+  font-weight: normal;
+  font-size: 16px;
 }
 
-#front {
-  font-size: 22px;
-  font-weight: bold;
+#controls-bar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.control-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
 }
 
 button {
-  margin: 10px;
-  padding: 10px 20px;
-  font-size: 16px;
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: 1px solid #ff99c9;
+  background: #ffe0f0;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+button:hover {
+  background: #ffc5e0;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.qtype-btn.active {
+  background: #ff99c9;
+  color: white;
+}
+
+#quiz-area {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+#question-text {
+  font-size: 18px;
+  margin-bottom: 16px;
+}
+
+#options-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.option-btn {
+  min-width: 200px;
+  text-align: center;
+}
+
+.option-btn.selected {
+  border-color: #6666ff;
+  box-shadow: 0 0 4px rgba(0,0,0,0.15);
+}
+
+.option-btn.correct {
+  background: #c8f7c5;
+  border-color: #4caf50;
+}
+
+.option-btn.incorrect {
+  background: #ffd6d6;
+  border-color: #f44336;
+}
+
+#feedback {
+  min-height: 24px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+#bottom-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.bottom-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+#progress, #score {
+  font-size: 14px;
+}
+
+
+#quiz-checkboxes {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 4px 20px;
+  margin-top: 6px;
+}
+
+#quiz-checkboxes label {
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.checkbox-controls {
+  margin-top: 6px;
+}
+
+.checkbox-controls button {
+  margin-right: 6px;
+  padding: 4px 8px;
+  font-size: 12px;
 }
