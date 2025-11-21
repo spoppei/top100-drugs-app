@@ -4,34 +4,76 @@
   <meta charset="UTF-8">
   <title>Top 100 Drugs Quiz</title>
   <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 </head>
 
+
 <body>
-
   <h1>Top 100 Drugs Quiz</h1>
+  <h2 class="subtitle">Built for no apparent reason</h2>
 
-  <div id="mode-select">
-    <button data-mode="brand">Generic → Brand</button>
-    <button data-mode="class">Generic → Class</button>
-    <button data-mode="indications">Generic → Indications</button>
+  <div id="controls-bar">
+    <div class="control-group">
+      <span>Question type:</span>
+      <button class="qtype-btn active" data-qtype="brand">Brand</button>
+      <button class="qtype-btn" data-qtype="indications">Indications</button>
+    </div>
+
+    <div class="control-group">
+      <span>Number of questions:</span>
+      <select id="num-questions">
+        <option value="10">10</option>
+        <option value="20">20</option>
+        <option value="50">50</option>
+        <option value="0">Endless</option>
+      </select>
+    </div>
+
+
+<div class="control-group">
+  <span>Quiz category:</span>
+
+  <div id="quiz-checkboxes">
+    <label><input type="checkbox" class="quiz-check" value="1"> Quiz 1</label>
+    <label><input type="checkbox" class="quiz-check" value="2"> Quiz 2</label>
+    <label><input type="checkbox" class="quiz-check" value="3"> Quiz 3</label>
+    <label><input type="checkbox" class="quiz-check" value="4"> Quiz 4</label>
+    <label><input type="checkbox" class="quiz-check" value="5"> Quiz 5</label>
+    <label><input type="checkbox" class="quiz-check" value="6"> Quiz 6</label>
+    <label><input type="checkbox" class="quiz-check" value="7"> Quiz 7</label>
+    <label><input type="checkbox" class="quiz-check" value="8"> Quiz 8</label>
+    <label><input type="checkbox" class="quiz-check" value="9"> Quiz 9</label>
+    <label><input type="checkbox" class="quiz-check" value="10"> Quiz 10</label>
   </div>
 
-  <div id="quiz-modes">
-    <button id="mcq">Multiple Choice</button>
+  <div class="checkbox-controls">
+    <button id="select-all-quizzes">Select all</button>
+    <button id="clear-all-quizzes">Clear all</button>
   </div>
-
-  <div id="card">
-    <p id="front"></p>
-    <p id="back"></p>
-  </div>
-
-<div id="controls">
-  <button id="flip" class="flashcard-only">Show Answer</button>
-  <button id="next">Next</button>
 </div>
 
-  <script src="app.js"></script>
 
+
+
+    <button id="start-quiz">Start or reset quiz</button>
+  </div>
+
+  <div id="quiz-area">
+    <div id="question-text"></div>
+    <div id="options-container"></div>
+
+    <div id="feedback"></div>
+
+    <div id="bottom-bar">
+      <span id="progress"></span>
+      <span id="score"></span>
+      <div class="bottom-buttons">
+        <button id="check-answer">Check answer</button>
+        <button id="next-question" disabled>Next</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
 </body>
 </html>
-
