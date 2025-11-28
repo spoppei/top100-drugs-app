@@ -7,10 +7,19 @@
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 </head>
 
+<!-- DISCO BALL BUTTON -->
+<div id="disco-ball" title="Disco Mode!">🪩</div>
+
 
 <body>
   <h1>Top 100 Drugs Quiz</h1>
   <h2 class="subtitle">Built for no apparent reason</h2>
+
+
+  <div id="progress-bar">
+  <div id="progress-fill"></div>
+    </div>
+
 
   <div id="controls-bar">
     <div class="control-group">
@@ -28,6 +37,16 @@
         <option value="0">Endless</option>
       </select>
     </div>
+
+    <div class="control-group">
+     <span>Mode:</span>
+     <button id="mode-toggle">Study Mode</button>
+</div>
+
+    <div class="control-group">
+  <span>Theme:</span>
+  <button id="dark-toggle">Dark Mode</button>
+</div>
 
 
 <div class="control-group">
